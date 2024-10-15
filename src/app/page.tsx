@@ -16,13 +16,13 @@ export default async function Home() {
 
   return (
     <Fragment>
-      <Typography variant="h3" marginBottom={3} marginTop={8}>
+      <Typography variant="h3" marginBottom={3}>
         Lista de usuários
       </Typography>
       <Grid container spacing={2} gap={8}>
         {users?.data?.map((user) => (
           <Grid key={user.id}>
-            <Link href={`/${user?.id}`}>
+            <Link href={`/users/${user?.id}`}>
               <Card>
                 <CardActionArea>
                   <Image
