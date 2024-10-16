@@ -1,3 +1,4 @@
+// Página de listagem de usuário. Por não possuir interação com o usuário, é um Server Component, renderizado no lado de um servidor.
 import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -47,5 +48,3 @@ export default async function Home() {
     </Fragment>
   );
 }
-
-// Desafio: Componentizar melhor para, ao mudar de página,

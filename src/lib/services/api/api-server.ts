@@ -1,3 +1,4 @@
+// Interceptor criado com axios. Responsável por interceptar requests e responses da API, podendo formatar ou adicionar uma lógica no envio da requisição ou na sua resposta
 import axios from "axios";
 
 const apiServer = axios.create({

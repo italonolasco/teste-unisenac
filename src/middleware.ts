@@ -1,3 +1,6 @@
+// Aqui é onde tornamos as rotas públicas ou privadas.
+// O middleware do Next é chamado nas rotas descritas no matcher, entre a transição de páginas. Dessa forma, a lógica aplicada aqui é realizada antes do redirecionamento.
+
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { getIronSession } from "iron-session";

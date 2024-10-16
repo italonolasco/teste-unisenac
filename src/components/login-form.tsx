@@ -1,4 +1,5 @@
 "use client";
+// Client component do formulário de login. É necessário ser um client component porque lidamos com interação de usuário (evento de click no botão e preenchimento de input)
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { useForm } from "react-hook-form";

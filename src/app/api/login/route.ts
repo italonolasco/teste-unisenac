@@ -1,3 +1,4 @@
+// Route Handler do Next. Recebe a requisição do cliente e realiza no lado do servidor.
 import { cookies } from "next/headers";
 import { getIronSession } from "iron-session";
 
@@ -23,6 +24,9 @@ export async function POST(req: Request) {
 
     session.token = response.token;
     await session.save();
+    // Ao realizar o login e recebermos o token da API, salvamos o token em um cookie, mantendo a autenticação do usuário
+    // Em desenvolvimento de produtos, é muito comum termos que enviar o token a cada requisição para o backend, para o back entender que temos autorização de buscar aquele conteúdo
+    // O envio do token pode ser feito com o interceptor de request, enviando sempre o token no header da requisição
 
     return Response.json(response);
   } catch (error) {
